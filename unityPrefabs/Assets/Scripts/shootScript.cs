@@ -3,6 +3,7 @@ using UnityEngine;
 public class shootScript : MonoBehaviour
 {
     public GameObject bullet;
+    public GameObject originOgject;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,7 +15,7 @@ public class shootScript : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.Mouse0)) {
-            Instantiate(bullet, new Vector3(8.5f, 2.6f, 0), Quaternion.Euler(0, 0, 90));
+            Instantiate(bullet, originOgject.transform.position, transform.rotation);
         }
     }
 }
