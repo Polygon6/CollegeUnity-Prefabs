@@ -14,7 +14,7 @@ public class shootScript : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.Mouse0)) {
-            Instantiate(bullet);
+            Instantiate(bullet, new Vector3(8.5f, 2.6f, 0), Quaternion.Euler(0, 0, 90));
         }
     }
 }
