@@ -14,4 +14,9 @@ public class pewpew : MonoBehaviour
     {
         transform.position += transform.up * bulletSpeed * Time.deltaTime;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        print("bullet hit a thing");
+    }
 }
